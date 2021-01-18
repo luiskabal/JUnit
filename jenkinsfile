@@ -4,19 +4,19 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh "C:/maven/apache-maven-3.6.3/bin/mvn clean"
+                bat "C:/maven/apache-maven-3.6.3/bin/mvn clean"
             }
         }
 
         stage('test') {
             steps {
-                sh "C:/maven/apache-maven-3.6.3/bin/mvn compile"
+                bat "C:/maven/apache-maven-3.6.3/bin/mvn compile"
             }
         }
 
         stage('test2') {
             steps {
-                sh '''
+                bat '''
                     C:/maven/apache-maven-3.6.3/bin/mvn test
                 '''
             }
